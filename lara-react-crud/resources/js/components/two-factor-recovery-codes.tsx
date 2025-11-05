@@ -55,7 +55,7 @@ export default function TwoFactorRecoveryCodes({
     return (
         <Card>
             <CardHeader>
-                <CardTitle className="flex gap-3">
+                <CardTitle className="flex gap-3" id="recovery-codes-title">
                     <LockKeyhole className="size-4" aria-hidden="true" />
                     2FA Recovery Codes
                 </CardTitle>
@@ -101,7 +101,6 @@ export default function TwoFactorRecoveryCodes({
                 <div
                     id="recovery-codes-section"
                     className={`relative overflow-hidden transition-all duration-300 ${codesAreVisible ? 'h-auto opacity-100' : 'h-0 opacity-0'}`}
-                    aria-hidden={!codesAreVisible}
                 >
                     <div className="mt-3 space-y-3">
                         {errors?.length ? (
@@ -112,7 +111,7 @@ export default function TwoFactorRecoveryCodes({
                                     ref={codesSectionRef}
                                     className="grid gap-1 rounded-lg bg-muted p-4 font-mono text-sm"
                                     role="list"
-                                    aria-label="Recovery codes"
+                                    aria-labelledby="recovery-codes-title"
                                 >
                                     {recoveryCodesList.length ? (
                                         recoveryCodesList.map((code, index) => (
@@ -125,10 +124,7 @@ export default function TwoFactorRecoveryCodes({
                                             </div>
                                         ))
                                     ) : (
-                                        <div
-                                            className="space-y-2"
-                                            aria-label="Loading recovery codes"
-                                        >
+                                        <div className="space-y-2">
                                             {Array.from(
                                                 { length: 8 },
                                                 (_, index) => (
