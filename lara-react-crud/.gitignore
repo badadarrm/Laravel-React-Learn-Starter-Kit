@@ -1,0 +1,63 @@
+# Laravel
+/.phpunit.cache
+/bootstrap/ssr
+/bootstrap/cache/
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/storage/framework/cache/
+/storage/framework/sessions/
+/storage/framework/views/
+/storage/logs/
+/vendor
+.env
+.env.backup
+.env.production
+.env.local
+.env.production.local
+.phpactor.json
+.phpunit.result.cache
+
+# Frontend
+/node_modules
+/resources/js/actions
+/resources/js/routes  
+/resources/js/wayfinder
+/resources/js/dist/
+/resources/css/dist/
+*.tsbuildinfo
+/.eslintcache
+
+# Development
+.DS_Store
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/auth.json
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+/.history/
+/.cache/
+/.parcel-cache/
+
+# Testing & Quality
+/coverage/
+/.php-cs-fixer.cache
+
+# Package Management
+/composer.phar
+/.yarn/cache
+/.pnp.*
+/yarn.lock
+/package-lock.json
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
