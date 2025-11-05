@@ -112,10 +112,12 @@ function TwoFactorSetupStep({
                                         readOnly
                                         value={manualSetupKey}
                                         className="h-full w-full bg-background p-3 text-foreground outline-none"
+                                        aria-label="Manual setup key"
                                     />
                                     <button
                                         onClick={() => copy(manualSetupKey)}
                                         className="border-l border-border px-3 hover:bg-muted"
+                                        aria-label={copiedText === manualSetupKey ? "Copied to clipboard" : "Copy setup key to clipboard"}
                                     >
                                         <IconComponent className="w-4" />
                                     </button>
